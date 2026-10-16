@@ -1,0 +1,179 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 340" width="100%" height="340" style="background: transparent; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#080c18" />
+      <stop offset="45%" stop-color="#0e172e" />
+      <stop offset="100%" stop-color="#180e2b" />
+    </linearGradient>
+
+    <!-- Glowing Line Gradients -->
+    <linearGradient id="streamGrad1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#06b6d4" stop-opacity="0.1" />
+      <stop offset="50%" stop-color="#38bdf8" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#818cf8" stop-opacity="0.2" />
+    </linearGradient>
+    <linearGradient id="streamGrad2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#8b5cf6" stop-opacity="0.1" />
+      <stop offset="50%" stop-color="#c084fc" stop-opacity="0.9" />
+      <stop offset="100%" stop-color="#f43f5e" stop-opacity="0.2" />
+    </linearGradient>
+
+    <!-- Text Linear Gradient -->
+    <linearGradient id="textGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="40%" stop-color="#e0f2fe" />
+      <stop offset="70%" stop-color="#38bdf8" />
+      <stop offset="100%" stop-color="#818cf8" />
+    </linearGradient>
+
+    <!-- Pill Gradients -->
+    <linearGradient id="pillGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0284c7" stop-opacity="0.4" />
+      <stop offset="100%" stop-color="#0f172a" stop-opacity="0.8" />
+    </linearGradient>
+    <linearGradient id="pillGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7c3aed" stop-opacity="0.4" />
+      <stop offset="100%" stop-color="#0f172a" stop-opacity="0.8" />
+    </linearGradient>
+    <linearGradient id="pillGrad3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#059669" stop-opacity="0.4" />
+      <stop offset="100%" stop-color="#0f172a" stop-opacity="0.8" />
+    </linearGradient>
+
+    <!-- Drop Shadows & Glow Filters -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    <filter id="subtleGlow" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    <filter id="textShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#000000" flood-opacity="0.7" />
+    </filter>
+  </defs>
+
+  <!-- Base Card Background -->
+  <rect width="1200" height="340" rx="16" fill="url(#bgGrad)" stroke="#1e293b" stroke-width="1.5" />
+
+  <!-- High-Tech Coordinate Grid -->
+  <g opacity="0.08" stroke="#94a3b8" stroke-width="1">
+    <line x1="100" y1="0" x2="100" y2="340" />
+    <line x1="200" y1="0" x2="200" y2="340" />
+    <line x1="300" y1="0" x2="300" y2="340" />
+    <line x1="400" y1="0" x2="400" y2="340" />
+    <line x1="500" y1="0" x2="500" y2="340" />
+    <line x1="600" y1="0" x2="600" y2="340" />
+    <line x1="700" y1="0" x2="700" y2="340" />
+    <line x1="800" y1="0" x2="800" y2="340" />
+    <line x1="900" y1="0" x2="900" y2="340" />
+    <line x1="1000" y1="0" x2="1000" y2="340" />
+    <line x1="1100" y1="0" x2="1100" y2="340" />
+    <line x1="0" y1="70" x2="1200" y2="70" />
+    <line x1="0" y1="140" x2="1200" y2="140" />
+    <line x1="0" y1="210" x2="1200" y2="210" />
+    <line x1="0" y1="280" x2="1200" y2="280" />
+  </g>
+
+  <!-- ================= DYNAMIC BACKGROUND STREAMS ================= -->
+  <!-- Animated Stream Wave 1 -->
+  <path d="M-50,110 C250,50 400,240 750,130 C950,60 1100,190 1250,120"
+        fill="none" stroke="url(#streamGrad1)" stroke-width="3" stroke-dasharray="12 16">
+    <animate attributeName="stroke-dashoffset" from="280" to="0" dur="6s" repeatCount="indefinite" />
+  </path>
+
+  <!-- Animated Stream Wave 2 -->
+  <path d="M-50,220 C220,290 450,110 800,240 C1000,310 1120,160 1250,220"
+        fill="none" stroke="url(#streamGrad2)" stroke-width="2.5" stroke-dasharray="10 14">
+    <animate attributeName="stroke-dashoffset" from="0" to="240" dur="7s" repeatCount="indefinite" />
+  </path>
+
+  <!-- Fast Data Packets / Nodes Flowing -->
+  <circle r="4" fill="#38bdf8" filter="url(#glow)">
+    <animateMotion path="M-50,110 C250,50 400,240 750,130 C950,60 1100,190 1250,120" dur="4s" repeatCount="indefinite" />
+  </circle>
+  <circle r="3.5" fill="#c084fc" filter="url(#glow)">
+    <animateMotion path="M-50,220 C220,290 450,110 800,240 C1000,310 1120,160 1250,220" dur="5s" repeatCount="indefinite" />
+  </circle>
+
+  <!-- Ambient Pulsing Nodes in Background -->
+  <g transform="translate(140, 70)">
+    <circle r="6" fill="#0284c7" opacity="0.4">
+      <animate attributeName="r" values="6;16;6" dur="3s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0.4;0.05;0.4" dur="3s" repeatCount="indefinite" />
+    </circle>
+    <circle r="4" fill="#38bdf8" />
+  </g>
+  <g transform="translate(1080, 270)">
+    <circle r="7" fill="#8b5cf6" opacity="0.4">
+      <animate attributeName="r" values="7;18;7" dur="3.5s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0.4;0.05;0.4" dur="3.5s" repeatCount="indefinite" />
+    </circle>
+    <circle r="4" fill="#c084fc" />
+  </g>
+  <g transform="translate(1060, 65)">
+    <circle r="6" fill="#10b981" opacity="0.4">
+      <animate attributeName="r" values="6;15;6" dur="4s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0.4;0.05;0.4" dur="4s" repeatCount="indefinite" />
+    </circle>
+    <circle r="3.5" fill="#34d399" />
+  </g>
+
+  <!-- ================= FLOATING BADGES / CARDS (Subtle Dynamic Drift) ================= -->
+  <!-- Pill 1: Sub-Second Latency -->
+  <g transform="translate(75, 260)">
+    <animateTransform attributeName="transform" type="translate" values="75,260; 75,254; 75,260" dur="4.5s" repeatCount="indefinite" />
+    <rect width="180" height="34" rx="17" fill="url(#pillGrad1)" stroke="#38bdf8" stroke-width="1" stroke-opacity="0.4"/>
+    <text x="18" y="22" fill="#38bdf8" font-size="12" font-weight="600">⚡ Sub-Second Latency</text>
+  </g>
+
+  <!-- Pill 2: Continuous SQL -->
+  <g transform="translate(275, 260)">
+    <animateTransform attributeName="transform" type="translate" values="275,260; 275,252; 275,260" dur="5s" repeatCount="indefinite" />
+    <rect width="165" height="34" rx="17" fill="url(#pillGrad2)" stroke="#c084fc" stroke-width="1" stroke-opacity="0.4"/>
+    <text x="18" y="22" fill="#c084fc" font-size="12" font-weight="600">🌊 Continuous SQL</text>
+  </g>
+
+  <!-- Pill 3: Stateful Processing -->
+  <g transform="translate(760, 260)">
+    <animateTransform attributeName="transform" type="translate" values="760,260; 760,253; 760,260" dur="4.2s" repeatCount="indefinite" />
+    <rect width="185" height="34" rx="17" fill="url(#pillGrad1)" stroke="#38bdf8" stroke-width="1" stroke-opacity="0.4"/>
+    <text x="16" y="22" fill="#7dd3fc" font-size="12" font-weight="600">🔄 Stateful Streaming</text>
+  </g>
+
+  <!-- Pill 4: Exactly-Once -->
+  <g transform="translate(965, 260)">
+    <animateTransform attributeName="transform" type="translate" values="965,260; 965,255; 965,260" dur="4.8s" repeatCount="indefinite" />
+    <rect width="160" height="34" rx="17" fill="url(#pillGrad3)" stroke="#34d399" stroke-width="1" stroke-opacity="0.4"/>
+    <text x="18" y="22" fill="#34d399" font-size="12" font-weight="600">🛡️ Exactly-Once</text>
+  </g>
+
+  <!-- ================= FOREGROUND HERO CONTENT (Unobscured & High Contrast) ================= -->
+  <g id="foregroundHero" filter="url(#textShadow)">
+    <!-- Header Category Tag -->
+    <g transform="translate(600, 52)">
+      <rect x="-135" y="-14" width="270" height="28" rx="14" fill="#0f172a" fill-opacity="0.9" stroke="#334155" stroke-width="1"/>
+      <circle cx="-112" cy="0" r="4.5" fill="#22c55e">
+        <animate attributeName="opacity" values="1;0.4;1" dur="2s" repeatCount="indefinite" />
+      </circle>
+      <text x="-98" y="4" fill="#94a3b8" font-size="11.5" font-weight="700" letter-spacing="1.2">CURATED ECOSYSTEM HUB</text>
+    </g>
+
+    <!-- Main Title -->
+    <text x="600" y="128" text-anchor="middle" fill="url(#textGrad)" font-size="44" font-weight="800" letter-spacing="-0.8">
+      AWESOME STREAM PROCESSING
+    </text>
+
+    <!-- Main Subtitle -->
+    <text x="600" y="168" text-anchor="middle" fill="#cbd5e1" font-size="17.5" font-weight="400" letter-spacing="0.2">
+      High-Throughput Engines, Real-Time Streaming Databases &amp; Event-Driven Architecture
+    </text>
+
+    <!-- Tech Stack Ribbon -->
+    <text x="600" y="208" text-anchor="middle" fill="#64748b" font-size="13" font-weight="500" letter-spacing="0.8">
+      APACHE FLINK  •  KAFKA STREAMS  •  RISINGWAVE  •  MATERIALIZE  •  PROTON  •  SPARK STREAMING  •  BYTWAX
+    </text>
+  </g>
+</svg>
