@@ -1,6 +1,6 @@
 # Awesome-Stream-Processing
 
-# Top Stream Processing Tools Ecosystem
+## Top Stream Processing Tools Ecosystem
 
 **Curated List of SaaS Products & Open-Source GitHub Projects**  
 *Focused on Real-Time Event Processing, Durable State & Continuous SQL Analytics*  
